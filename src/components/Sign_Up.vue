@@ -15,9 +15,11 @@
         <div class="error" :style="{ color: passwordErrorColor }">{{ passwordError }}</div><br>
     </div>
     <button class="b1">sign up</button><br>
-    <p>
-      <router-link :to="{ name: 'Login' }">Login</router-link>
-    </p>
+
+    <router-link :to="{ name: 'Login' }"><br>
+  <button class="login-link">Login</button>
+</router-link>
+
 
   </form>
   
@@ -102,4 +104,19 @@ input:focus {
       border-radius: 20px;
 }
 
-</style>
+
+.login-link {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-link:hover {
+  background-color: #45a049;
+}
+
+
+</style>  
