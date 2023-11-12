@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <Header/>
   <h1>welcome to Add restaurant page</h1>
   <!DOCTYPE html>
@@ -51,6 +51,75 @@ methods:{
     },
 }
 }
+</script> -->
+
+
+<template>
+  <div>
+    <Header />
+    <h1>welcome to Add restaurant page</h1>
+
+    <form @submit.prevent="submitForm" class="restaurant-form">
+      <label for="rname">Restaurant Name:</label>
+    <input type="text" id="rname" name="rname" placeholder="Enter restaurant name" v-model="name" required>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" placeholder="Enter address" v-model="address" required>
+
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact" placeholder="Enter contact number" v-model="contact" required>
+
+    <input type="submit" value="Submit">
+  
+    </form>
+
+    <div v-if="submitted">
+      <h2>Submitted Form Values</h2>
+      <p>Restaurant Name: {{ name }}</p>
+      <p>Address: {{ address }}</p>
+      <p>Contact: {{ contact }}</p>
+
+      <!-- Pass the form values as props to the Update component -->
+      <Update :restaurantData="formValues" />
+    </div>
+  </div>
+</template>
+
+<script>
+import Header from "./Header.vue";
+import Update from "./Update.vue"; // Import the Update component
+
+export default {
+  name: "Add",
+  components: {
+    Header,
+    Update, // Register the Update component
+  },
+  data() {
+    return {
+      name: "",
+      address: "",
+      contact: "",
+      submitted: false,
+    };
+  },
+  computed: {
+    formValues() {
+      return {
+        name: this.name,
+        address: this.address,
+        contact: this.contact,
+      };
+    },
+  },
+  methods: {
+    submitForm() {
+      // Handle form submission logic here
+      console.log("Form submitted:", this.name, this.address, this.contact);
+      this.submitted = true;
+    },
+  },
+};
 </script>
 
 <style>
