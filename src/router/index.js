@@ -9,12 +9,12 @@ import Update from '../components/Update.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: Home
   },
   {
-    path: '/sign_up',
+    path: '/',
     name: 'Sign_Up',
     component: Sign_Up
   },

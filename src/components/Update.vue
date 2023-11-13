@@ -20,7 +20,7 @@ components:{
 
 <template>
     <div>
-        <!-- <Header/> -->
+        <Header/>
       <h1>welcome to list of restaurant</h1>
   
       <!-- Display the received form data -->
@@ -35,12 +35,12 @@ components:{
   
   <script>
   import Add from "./Add.vue";
-//   import Header from "./Header.vue"
+  import Header from "./Header.vue"
   export default {
     name: "Update",
     components: {
       Add,
-    //   Header
+      Header
     },
     props: {
       restaurantData: Object, // Define the prop type
