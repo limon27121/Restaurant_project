@@ -11,7 +11,7 @@
        
         <a href="">Add Restaurant</a>
         <a href="#">Update Restaurant</a> -->
-        <a @click="logout()"  href="#">Logout</a>
+        <a @click="logout()" href="#">Logout</a>
     </div>
 </div>
 </div>
@@ -22,7 +22,11 @@ export default {
   name:"Header",
   methods:{
     logout(){
-        this.$router.push({name:"Login"})
+        // this.$router.push({name:"Login"})
+        // console.log("done")
+        localStorage.clear()
+            this.$router.push({name:"Login"});
+
     },
   }
 }

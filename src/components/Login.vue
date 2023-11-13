@@ -9,8 +9,7 @@
       <label>Enter Email:</label>
       <input type="email" v-model="email" required><br>
       <label>Enter Password:</label>
-        <input type="password" v-model="password" required>
-        <div class="error" :style="{ color: passwordErrorColor }">{{ passwordError }}</div><br>
+        <input type="password" v-model="password" required><br>
     </div>
   
     <p>

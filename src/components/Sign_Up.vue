@@ -4,7 +4,7 @@
     <img alt="limon logo" src="../assets/limon.png">
     </div>
   <h1>SignUp</h1>
-  <form>
+  <form @submit.prevent="submitForm"> 
   <!-- <form @submit.prevent="handleSubmit"> -->
     <div class="form-container">
     <label>Enter Name:</label>
@@ -12,8 +12,7 @@
       <label>Enter Email:</label>
       <input type="email" v-model="email"  required><br>
       <label>Enter Password:</label>
-        <input type="password" v-model="password" required>
-        <div class="error" :style="{ color: passwordErrorColor }">{{ passwordError }}</div><br>
+        <input type="password" v-model="password" required><br>
     </div>
     <button class="b1" @click="signup">sign up</button><br>
 
@@ -37,30 +36,27 @@ export default {
         email: '',
         password: '',
         passwordError: null,
-        passwordErrorColor:'red',
         logged: false
       }
     },
     name:'Sign_Up',
     methods:{
-        handleSubmit() {
-        // validate password
-        this.passwordError = this.password.length >= 6 ?
-        "" : 'Password must be at least 6 characters long';
+    //     handleSubmit() {
+    //     // validate password
+    //     this.passwordError = this.password.length >= 6 ?
+    //     "" : 'Password must be at least 6 characters long';
 
-        // Completed
-        // this.name = '';
-        // this.email = '';
-        // this.password = '';
-        if (this.passwordError ==='') {
-        this.$router.push({name:"home"})
-        // this.resetForm();
-      }
+    //     // Completed
+    //     // this.name = '';
+    //     // this.email = '';
+    //     // this.password = '';
+    //     if (this.passwordError ==='') {
+    //     this.$router.push({name:"home"})
+    //     // this.resetForm();
+    //   }
       
-    },
+    // },
     async signup(){
-      this.passwordError = this.password.length >= 6 ?
-        "" : 'Password must be at least 6 characters long';
      let result= await axios.post("http://localhost:3000/users",{
       name:this.name,
       email:this.email,

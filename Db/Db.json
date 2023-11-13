@@ -121,18 +121,72 @@
       "id": 20
     }
   ],
-  "restaurant":[
+  "restaurant": [
     {
-         "id":1,
-         "name":"pizzaburg",
-         "contact":1111,
-         "address":"mirpur1"
+      "id": 1,
+      "name": "pizzaburg",
+      "contact": 1111,
+      "address": "mirpur1"
     },
     {
-        "id":2,
-        "name":"pizza",
-        "contact":1000,
-        "address":"mirpur2"
-   }
+      "id": 2,
+      "name": "pizza",
+      "contact": 1000,
+      "address": "mirpur2"
+    },
+    {
+      "id": 3,
+      "name": "Chillox",
+      "contact": 123456,
+      "address": "mirpur11"
+    },
+    {
+      "name": "pizza23",
+      "address": "Dhaka1 Bangladesh",
+      "contact": "01623692270",
+      "id": 4
+    },
+    {
+      "name": "pizza23",
+      "address": "Dhaka1 Bangladesh",
+      "contact": "01623692270",
+      "id": 5
+    },
+    {
+      "name": "Circuit Sense",
+      "address": "Kuril, Kuratoli",
+      "contact": "01980044357",
+      "id": 6
+    },
+    {
+      "name": "Circuit Sense",
+      "address": "Kuril, Kuratoli",
+      "contact": "01980044357",
+      "id": 7
+    },
+    {
+      "name": "Circuit Sense",
+      "address": "Kuril, ",
+      "contact": "01980044355",
+      "id": 8
+    },
+    {
+      "name": "italia",
+      "address": "sony square",
+      "contact": "01552353448",
+      "id": 9
+    },
+    {
+      "name": "italia",
+      "address": "sony square",
+      "contact": "01552353448",
+      "id": 10
+    },
+    {
+      "name": "italia1",
+      "address": "sony square",
+      "contact": "01552353448",
+      "id": 11
+    }
   ]
 }

@@ -37,12 +37,12 @@ export default {
   components:{
     Header},
   methods: {
-    back() {
-      this.$router.push({ name: 'Sign_Up' });
-    },
-    login(){
-      this.$router.push({name:'Login'})
-    }
+    // back() {
+    //   this.$router.push({ name: 'Sign_Up' });
+    // },
+    // login(){
+    //   this.$router.push({name:'Login'})
+    // }
   },
   async mounted(){
     let user=localStorage.getItem('user-info')

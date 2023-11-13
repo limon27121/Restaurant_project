@@ -69,55 +69,47 @@ methods:{
     <label for="contact">Contact:</label>
     <input type="text" id="contact" name="contact" placeholder="Enter contact number" v-model="contact" required>
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="Add Restaurant" @click="add">
   
     </form>
 
-    <div v-if="submitted">
-      <h2>Submitted Form Values</h2>
-      <p>Restaurant Name: {{ name }}</p>
-      <p>Address: {{ address }}</p>
-      <p>Contact: {{ contact }}</p>
-
-      <!-- Pass the form values as props to the Update component -->
-      <Update :restaurantData="formValues" />
-    </div>
-  </div>
+   </div>
 </template>
 
 <script>
-import Header from "./Header.vue";
-import Update from "./Update.vue"; // Import the Update component
-
+import Header from "./Header.vue"; // Import the Update component
+import axios from "axios";
 export default {
   name: "Add",
+  data(){
+    return{
+    name:"",
+    address:"",
+    contact:""
+    }
+  },
   components: {
-    Header,
-    Update, // Register the Update component
+    Header, // Register the Update component
   },
   data() {
     return {
-      name: "",
-      address: "",
-      contact: "",
-      submitted: false,
+  
     };
   },
   computed: {
-    formValues() {
-      return {
-        name: this.name,
-        address: this.address,
-        contact: this.contact,
-      };
-    },
   },
   methods: {
-    submitForm() {
-      // Handle form submission logic here
-      console.log("Form submitted:", this.name, this.address, this.contact);
-      this.submitted = true;
-    },
+ async add(){
+    let value= await axios.post("http://localhost:3000/restaurant",{
+      name:this.name,
+      address:this.address,
+      contact:this.contact
+    })
+    if(value.status==201){
+      this.$router.push({name:"home"})
+    }
+   
+  }
   },
 };
 </script>
