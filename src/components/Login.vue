@@ -7,7 +7,7 @@
   <form @submit.prevent="handleSubmit">
     <div class="form-container">
       <label>Enter Email:</label>
-      <input type="email" required><br>
+      <input type="email" v-model="email" required><br>
       <label>Enter Password:</label>
         <input type="password" v-model="password" required>
         <div class="error" :style="{ color: passwordErrorColor }">{{ passwordError }}</div><br>
@@ -25,13 +25,38 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
 name:"Login",
-methods:{
-  home(){
-    this.$router.push({name:"home"})
+data(){
+  return{
+    email:"",
+    password:""
   }
+},
+methods:{
+  async home(){
+    //  let user=await axios.get(`localhost:3000/users?email=${this.email}&password=${this.password}`)
+    let user = await axios.get(`http://localhost:3000/users?email=${this.email}&password=${this.password}`)
+
+
+     if(user.status==200 && user.data.length>0){
+      localStorage.setItem("user-info",JSON.stringify(user.data[0]))
+      this.$router.push({name:"home"})
+      
+   
+  }
+ 
 }
+},
+mounted(){
+    let user=localStorage.getItem('user-info')
+      if(user){
+        this.$router.push({name:"home"})
+       
+      }
+
+    }
 }
 </script>
 

@@ -4,7 +4,8 @@
     <img alt="limon logo" src="../assets/limon.png">
     </div>
   <h1>SignUp</h1>
-  <form @submit.prevent="handleSubmit">
+  <form>
+  <!-- <form @submit.prevent="handleSubmit"> -->
     <div class="form-container">
     <label>Enter Name:</label>
       <input type="text" v-model="name"  required><br>
@@ -26,6 +27,8 @@
 </template>
 
 <script>
+import axios from "axios"
+// import { json } from "body-parser";
 export default {
 
     data() {
@@ -55,17 +58,31 @@ export default {
       }
       
     },
-    signup(){
-      console.log(this.name,this.email,this.password)
+    async signup(){
+      this.passwordError = this.password.length >= 6 ?
+        "" : 'Password must be at least 6 characters long';
+     let result= await axios.post("http://localhost:3000/users",{
+      name:this.name,
+      email:this.email,
+      password:this.password
+
+     })
+     console.log(result)
+     if(result.status==201){
+      this.$router.push({name:"home"})
+      localStorage.setItem("user-info",JSON.stringify(result.data))
+     
+     }
+
     }
     },
     mounted(){
-      this.logged=true
-      if(this.logged==true){
-        // this.$router.push({name:"home"})
+    let user=localStorage.getItem('user-info')
+      if(user){
+        this.$router.push({name:"home"})
        
       }
-      this.logged=false
+
     }
 
 

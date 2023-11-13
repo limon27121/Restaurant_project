@@ -11,6 +11,128 @@
       "email": "shad@gmail.com",
       "password": "shad1234",
       "id": 2
+    },
+    {
+      "name": "ssssss",
+      "email": "limon@gmail.com",
+      "password": "Limon27121",
+      "id": 3
+    },
+    {
+      "name": "limon",
+      "email": "limon@gmail.com",
+      "password": "Limon27121",
+      "id": 4
+    },
+    {
+      "name": "limon",
+      "email": "limon@gmail.com",
+      "password": "Limon27121",
+      "id": 5
+    },
+    {
+      "name": "limon",
+      "email": "limon@gmail.com",
+      "password": "Limon27121",
+      "id": 6
+    },
+    {
+      "name": "limon",
+      "email": "limon@gmail.com",
+      "password": "Limon27121",
+      "id": 7
+    },
+    {
+      "name": "limon",
+      "email": "limon@gmail.com",
+      "password": "Limon27121",
+      "id": 8
+    },
+    {
+      "name": "sssss",
+      "email": "mmm@gmail.com",
+      "password": "L1222111",
+      "id": 9
+    },
+    {
+      "name": "",
+      "email": "mmm@gmail.com",
+      "password": "L1222111",
+      "id": 10
+    },
+    {
+      "name": "deba",
+      "email": "deba@gmail.com",
+      "password": "5555555",
+      "id": 11
+    },
+    {
+      "name": "fahim",
+      "email": "fahim@gmail.com",
+      "password": "7777777",
+      "id": 12
+    },
+    {
+      "name": "limon",
+      "email": "mmm@gmail.com",
+      "password": "L1222111",
+      "id": 13
+    },
+    {
+      "name": "",
+      "email": "mmm@gmail.com",
+      "password": "L1222111",
+      "id": 14
+    },
+    {
+      "name": "limon",
+      "email": "mmm@gmail.com",
+      "password": "L1222111",
+      "id": 15
+    },
+    {
+      "name": "",
+      "email": "mmm@gmail.com",
+      "password": "L1222111",
+      "id": 16
+    },
+    {
+      "name": "oishi",
+      "email": "ishi@gmail.com",
+      "password": "00000000",
+      "id": 17
+    },
+    {
+      "name": "oishi",
+      "email": "oishi@gmail.com",
+      "password": "00000000",
+      "id": 18
+    },
+    {
+      "name": "oishi",
+      "email": "oishi@gmail.com",
+      "password": "00000000",
+      "id": 19
+    },
+    {
+      "name": "oishi",
+      "email": "abs@gmail.com",
+      "password": "11221111",
+      "id": 20
     }
+  ],
+  "restaurant":[
+    {
+         "id":1,
+         "name":"pizzaburg",
+         "contact":1111,
+         "address":"mirpur1"
+    },
+    {
+        "id":2,
+        "name":"pizza",
+        "contact":1000,
+        "address":"mirpur2"
+   }
   ]
 }
