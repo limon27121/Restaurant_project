@@ -6,7 +6,7 @@
     <div class="nav-links1">
         <router-link :to="{ name: 'home' }">Home</router-link>
         <router-link :to="{ name: 'Add' }">Add Restaurant</router-link>
-        <router-link :to="{ name: 'Update' }"> Restaurant List</router-link>
+        <router-link :to="{ name: 'Update' }"> Update Restaurant List</router-link>
         <!-- <a @click="home" href="#">Home</a>
        
         <a href="">Add Restaurant</a>

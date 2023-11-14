@@ -7,12 +7,18 @@
       <td>Restaurant Name</td>
       <td>Contact</td>
       <td>Address</td>
+      <td>Update</td>
     </tr>
     <tr v-for="item in restaurant" :key="item.id">
       <td>{{item.id}}</td>
       <td>{{item.name}}</td>
       <td>{{item.contact}}</td>
       <td>{{item.address}}</td>
+      <td><router-link :to="{ name: 'Update'}">Update</router-link></td>
+     <!-- <td><button @click="change(item.id)">Update</button></td> -->
+      
+
+
     </tr>
   </table>
 </template>
@@ -52,7 +58,14 @@ export default {
       }
     let res= await axios.get("http://localhost:3000/restaurant")
      this.restaurant=res.data
+    },
+    change(someId){
+      // const someId = item.id;
+    //  this.$router.push("/update")
+    // return this.$router.replace('/update/'+ someId);
+    return this.$router.push({ name: 'Update', params: { id: someId } });
     }
+    
 };
 
 </script>
