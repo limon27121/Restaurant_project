@@ -28,9 +28,11 @@ const routes = [
     name: 'Add',
     component: Add
   },
-  {
-    path: '/update',
-    // path: '/update/:id',
+
+  { 
+    // path: '/update',
+   
+    path: '/update/:id',
     name: 'Update',
     component: Update
   }

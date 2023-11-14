@@ -21,7 +21,7 @@ components:{
 <template>
     
         <Header/>
-      <h1>welcome to Update page</h1>
+      <h1>Welcome To Update Page</h1>
       <form @submit.prevent="submitForm" class="restaurant-form">
       <label for="rname">Restaurant Name:</label>
     <input type="text" id="rname" name="rname" placeholder="Enter restaurant name" v-model="name" required>

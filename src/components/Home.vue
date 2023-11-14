@@ -1,6 +1,6 @@
 <template>
    <Header/>
-  <h1>welcome to Home page</h1>
+  <h1>Welcome To Home Page</h1>
   <table class="styled-table">
     <tr class="t1">
       <td>ID</td>
@@ -8,6 +8,7 @@
       <td>Contact</td>
       <td>Address</td>
       <td>Update</td>
+      <td>Delete</td>
     </tr>
     <tr v-for="item in restaurant" :key="item.id">
       <td>{{item.id}}</td>
@@ -15,6 +16,8 @@
       <td>{{item.contact}}</td>
       <td>{{item.address}}</td>
       <td><router-link :to="{ name: 'Update'}">Update</router-link></td>
+      <td><button @click="delete1(item.id)">Delete</button></td>
+       <!-- <td><router-link :to="`/update/{$item.id}`">Update</router-link></td> -->
      <!-- <td><button @click="change(item.id)">Update</button></td> -->
       
 
@@ -49,6 +52,22 @@ export default {
     // login(){
     //   this.$router.push({name:'Login'})
     // }
+    delete1(id) {
+      // Find the index of the item with the specified id
+      const index = this.restaurant.findIndex(item => item.id === id);
+
+      // If the item is found, remove it from the array
+      if (index !== -1) {
+        this.restaurant.splice(index, 1);
+      }
+      this.updateIds();
+},
+updateIds() {
+      // Update IDs based on the current order in the array
+      this.restaurant.forEach((item, index) => {
+        item.id = index + 1;
+      });
+  }
   },
   async mounted(){
     let user=localStorage.getItem('user-info')
@@ -64,9 +83,9 @@ export default {
     //  this.$router.push("/update")
     // return this.$router.replace('/update/'+ someId);
     return this.$router.push({ name: 'Update', params: { id: someId } });
-    }
+    },
     
-};
+}
 
 </script>
 
