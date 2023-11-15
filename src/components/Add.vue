@@ -1,63 +1,9 @@
-<!-- <template>
-  <Header/>
-  <h1>welcome to Add restaurant page</h1>
-  <!DOCTYPE html>
-
-<body class="body1">
-
-  <form @submit.prevent="submitForm" class="restaurant-form">
-    <label for="rname">Restaurant Name:</label>
-    <input type="text" id="rname" name="rname" placeholder="Enter restaurant name" v-model="name" required>
-
-    <label for="address">Address:</label>
-    <input type="text" id="address" name="address" placeholder="Enter address" v-model="address" required>
-
-    <label for="contact">Contact:</label>
-    <input type="text" id="contact" name="contact" placeholder="Enter contact number" v-model="contact" required>
-
-    <input type="submit" value="Submit">
-  </form>
-
-</body>
-<div v-if="submitted">
-      <h2>Submitted Form Values</h2>
-      <p>Restaurant Name: {{ name }}</p>
-      <p>Address: {{ address }}</p>
-      <p>Contact: {{ contact }}</p>
-    </div>
-
-</template>
-
-<script>
-import Header from "./Header.vue"
-export default {
-name:'Add',
-components:{
-  Header
-},
-data() {
-      return {
-        name: '',
-        address: '',
-        contact: '',
-        submitted: false
-      }
-    },
-methods:{
-  submitForm() {
-      // Handle form submission logic here
-      console.log("Form submitted:", this.name, this.address, this.contact);
-      this.submitted = true;
-    },
-}
-}
-</script> -->
 
 
 <template>
   <div>
     <Header />
-    <h1>welcome to Add restaurant page</h1>
+    <h1>Welcome To Add Restaurant Page</h1>
 
     <form @submit.prevent="submitForm" class="restaurant-form">
       <label for="rname">Restaurant Name:</label>
@@ -100,7 +46,9 @@ export default {
   },
   methods: {
  async add(){
+
     let value= await axios.post("http://localhost:3000/restaurant",{
+      //store value
       name:this.name,
       address:this.address,
       contact:this.contact

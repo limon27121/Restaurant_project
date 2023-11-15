@@ -54,16 +54,20 @@ export default {
     // }
     delete1(id) {
       // Find the index of the item with the specified id
-      const index = this.restaurant.findIndex(item => item.id === id);
+      const index = this.restaurant.findIndex((item )=> item.id == id);
 
       // If the item is found, remove it from the array
       if (index !== -1) {
         this.restaurant.splice(index, 1);
       }
+
+      //update the order of id after the delete item
       this.updateIds();
 },
 updateIds() {
+
       // Update IDs based on the current order in the array
+
       this.restaurant.forEach((item, index) => {
         item.id = index + 1;
       });
@@ -71,19 +75,18 @@ updateIds() {
   },
   async mounted(){
     let user=localStorage.getItem('user-info')
+
+    // if there is no user they push to sign up page
       if(!user){
         this.$router.push({name:"Sign_Up"})
        
       }
+      else{
     let res= await axios.get("http://localhost:3000/restaurant")
      this.restaurant=res.data
+      }
     },
-    change(someId){
-      // const someId = item.id;
-    //  this.$router.push("/update")
-    // return this.$router.replace('/update/'+ someId);
-    return this.$router.push({ name: 'Update', params: { id: someId } });
-    },
+   
     
 }
 

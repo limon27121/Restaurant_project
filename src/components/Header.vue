@@ -4,13 +4,17 @@
         <img alt="navlogo" src="../assets/nav1.png">
       
     <div class="nav-links1">
+
+        <!-- route to link go to one page to another page or components -->
+
         <router-link :to="{ name: 'home' }">Home</router-link>
         <router-link :to="{ name: 'Add' }">Add Restaurant</router-link>
         <router-link :to="{ name: 'Update' }"> Update Restaurant List</router-link>
-        <!-- <a @click="home" href="#">Home</a>
-       
-        <a href="">Add Restaurant</a>
-        <a href="#">Update Restaurant</a> -->
+
+        <!-- add a method with event using  -->
+        
+        <!-- <router-link :to="{ name: 'Update' }" @click="updateRestaurantList">Update Restaurant List</router-link> -->
+
         <a @click="logout()" href="#">Logout</a>
     </div>
 </div>
@@ -22,10 +26,11 @@ export default {
   name:"Header",
   methods:{
     logout(){
-        // this.$router.push({name:"Login"})
-        // console.log("done")
+       //go to log out page and clear the local storage
+
         localStorage.clear()
-            this.$router.push({name:"Login"});
+        
+        this.$router.push({name:"Login"});
 
     },
   }

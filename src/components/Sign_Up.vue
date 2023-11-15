@@ -16,7 +16,7 @@
     </div>
     <button class="b1" @click="signup">sign up</button><br>
 
-    <router-link :to="{ name: 'Login' }"><br>
+    <router-link :to="{ name: 'Login' }"> <br>
   <button class="login-link">Login</button>
 </router-link>
 
@@ -63,7 +63,7 @@ export default {
       password:this.password
 
      })
-     console.log(result)
+  
      if(result.status==201){
       this.$router.push({name:"home"})
       localStorage.setItem("user-info",JSON.stringify(result.data))
@@ -72,14 +72,14 @@ export default {
 
     }
     },
-    mounted(){
-    let user=localStorage.getItem('user-info')
-      if(user){
-        this.$router.push({name:"home"})
+    // mounted(){
+    // let user=localStorage.getItem('user-info')
+    //   if(user){
+    //     this.$router.push({name:"home"})
        
-      }
+    //   }
 
-    }
+    // }
 
 
    

@@ -30,9 +30,9 @@ const routes = [
   },
 
   { 
-    // path: '/update',
+    path: '/update',
    
-    path: '/update/:id',
+    // path: '/update/:id',
     name: 'Update',
     component: Update
   }

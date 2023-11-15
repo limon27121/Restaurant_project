@@ -40,6 +40,7 @@ methods:{
 
 
      if(user.status==200 && user.data.length>0){
+      //convert data to json and strore it in local storage
       localStorage.setItem("user-info",JSON.stringify(user.data[0]))
       this.$router.push({name:"home"})
       
@@ -49,6 +50,8 @@ methods:{
 }
 },
 mounted(){
+  
+  // if data is match with local storage item go to home page
     let user=localStorage.getItem('user-info')
       if(user){
         this.$router.push({name:"home"})
