@@ -1,3 +1,4 @@
+
 <template>
    <Header/>
   <h1>Welcome To Home Page</h1>
@@ -15,10 +16,13 @@
       <td>{{item.name}}</td>
       <td>{{item.contact}}</td>
       <td>{{item.address}}</td>
-      <td><router-link :to="{ name: 'Update'}">Update</router-link></td>
+    
+
+      <td><router-link :to="{name: 'Update1', params: { id: item.id }}">Update</router-link></td>
+
       <td><button @click="delete1(item.id)">Delete</button></td>
-       <!-- <td><router-link :to="`/update/{$item.id}`">Update</router-link></td> -->
-     <!-- <td><button @click="change(item.id)">Update</button></td> -->
+
+
       
 
 
@@ -29,13 +33,6 @@
 <script>
 import Header from "./Header.vue"
 import axios  from "axios";
-// export default {
-// name:'Home',
-// methods:{
-//     redirect(){
-//       this.$router.push({name:"Home"})
-//     },
-// }
 export default {
   name: 'Home',
   data(){
@@ -46,12 +43,7 @@ export default {
   components:{
     Header},
   methods: {
-    // back() {
-    //   this.$router.push({ name: 'Sign_Up' });
-    // },
-    // login(){
-    //   this.$router.push({name:'Login'})
-    // }
+  
     delete1(id) {
       // Find the index of the item with the specified id
       const index = this.restaurant.findIndex((item )=> item.id == id);
@@ -93,16 +85,6 @@ updateIds() {
 </script>
 
 <style>
-
-/* .blue-button1 {
-  background-color: blue;
-  color: white;
- 
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-} */
 
 .t1{
   color: blue;

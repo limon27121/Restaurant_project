@@ -1,10 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import HomeView from '../views/HomeView.vue'
+
 import Home from '../components/Home.vue'
 import Sign_Up from '../components/Sign_Up.vue'
 import Login from '../components/Login.vue'
 import Add from '../components/Add.vue'
-import Update from '../components/Update.vue'
+// import Update from '../components/Update.vue'
+import HomeView from '../views//Update/HomeView.vue'
+import Update1 from '../views//Update/Update1.vue'
+
+
+
 
 
 const routes = [
@@ -28,13 +33,26 @@ const routes = [
     name: 'Add',
     component: Add
   },
-
+  {
+    path: '/update1',
+    name: 'update1',
+    component: Update1
+  },
   { 
-    path: '/update',
+    // path: '/update',
    
-    // path: '/update/:id',
-    name: 'Update',
-    component: Update
+    path: '/homeview',
+    name: 'HomeView',
+    component: HomeView,
+    props: true,
+  },
+  { 
+    // path: '/update',
+   
+    path: '/updateview/:id',
+    name: 'Update1',
+    component: Update1,
+    // props: true,
   }
 ]
 

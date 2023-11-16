@@ -9,7 +9,7 @@
 
         <router-link :to="{ name: 'home' }">Home</router-link>
         <router-link :to="{ name: 'Add' }">Add Restaurant</router-link>
-        <router-link :to="{ name: 'Update' }"> Update Restaurant List</router-link>
+        <router-link :to="{ name: 'HomeView' }"> Update Restaurant List</router-link>
 
         <!-- add a method with event using  -->
         

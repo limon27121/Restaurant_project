@@ -165,10 +165,10 @@
   ],
   "restaurant": [
     {
-      "id": 1,
-      "name": "pizzaburg",
-      "contact": 1111,
-      "address": "mirpur1"
+      "name": "pizza12345",
+      "address": "Dhaka Bangladesh1",
+      "contact": "99999",
+      "id": 1
     },
     {
       "id": 2,
@@ -177,15 +177,13 @@
       "address": "mirpur2"
     },
     {
-      "id": 3,
-      "name": "Chillox",
-      "contact": 123456,
-      "address": "mirpur11"
+      "name": "ctime",
+      "address": "coxs",
+      "contact": "cddeee",
+      "id": 3
     },
     {
-      "name": "pizza23",
-      "address": "Dhaka1 Bangladesh",
-      "contact": "01623692270",
+      "name": "pizza 34",
       "id": 4
     },
     {

@@ -1,24 +1,5 @@
+
 <!-- <template>
-    <Header/>
-   <h1>welcome to Update restaurant page</h1>
-</template>
-
-<script>
-import Header from "./Header.vue"
-export default {
-name:"Update",
-components:{
-  Header
-}
-}
-</script>
-
-<style>
-
-</style> -->
-
-
-<template>
     
         <Header/>
       <h1>Welcome To Update Page</h1>
@@ -35,6 +16,7 @@ components:{
     <input type="submit" value=" Update" @click="add">
   
     </form>
+    <div>{{ id }}</div>
      
   </template>
   
@@ -47,7 +29,7 @@ components:{
       Add,
       Header
     },
-    // props: ['id'],
+    props: ['id'],
   }
   </script>
   <style>
@@ -98,4 +80,4 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-</style>
+</style> -->
