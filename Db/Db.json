@@ -171,22 +171,6 @@
       "id": 1
     },
     {
-      "id": 2,
-      "name": "pizza",
-      "contact": 1000,
-      "address": "mirpur2"
-    },
-    {
-      "name": "ctime",
-      "address": "coxs",
-      "contact": "cddeee",
-      "id": 3
-    },
-    {
-      "name": "pizza 34",
-      "id": 4
-    },
-    {
       "name": "pizza23",
       "address": "Dhaka1 Bangladesh",
       "contact": "01623692270",
@@ -205,58 +189,16 @@
       "id": 7
     },
     {
-      "name": "Circuit Sense",
-      "address": "Kuril, ",
-      "contact": "01980044355",
-      "id": 8
-    },
-    {
-      "name": "italia",
-      "address": "sony square",
-      "contact": "01552353448",
-      "id": 9
-    },
-    {
       "name": "italia",
       "address": "sony square",
       "contact": "01552353448",
       "id": 10
     },
     {
-      "name": "italia1",
-      "address": "sony square",
-      "contact": "01552353448",
-      "id": 11
-    },
-    {
       "name": "italia12",
       "address": "sony square2",
       "contact": "0155235345",
       "id": 12
-    },
-    {
-      "name": "reddot",
-      "address": "Gulsan2",
-      "contact": "0167223454",
-      "id": 13
-    },
-    {
-      "name": "Jin Bari Restuarant ",
-      "address": "Jin Country",
-      "contact": "999993222u22",
-      "id": 14
-    },
-    {
-      "name": "Cefalo",
-      "address": "Dhanmondi",
-      "contact": "01623692273",
-      "id": 15
-    },
-    {
-      "name": "Cefalo",
-      "address": "Dhanmondi",
-      "contact": "01623692273",
-      "id": 16
     }
   ]
 }

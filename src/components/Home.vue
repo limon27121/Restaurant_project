@@ -33,55 +33,42 @@
 <script>
 import Header from "./Header.vue"
 import axios  from "axios";
+
+
 export default {
-  name: 'Home',
-  data(){
-    return{
-      restaurant:[]
-    }
+  data() {
+    return {
+      restaurant: []
+    };
   },
-  components:{
-    Header},
   methods: {
-  
-    delete1(id) {
-      // Find the index of the item with the specified id
-      const index = this.restaurant.findIndex((item )=> item.id == id);
+    async delete1(id) {
+      let result = await axios.delete(`http://localhost:3000/restaurant/${id}`);
 
-      // If the item is found, remove it from the array
-      if (index !== -1) {
-        this.restaurant.splice(index, 1);
-      }
-
-      //update the order of id after the delete item
-      this.updateIds();
-},
-updateIds() {
-
-      // Update IDs based on the current order in the array
-
-      this.restaurant.forEach((item, index) => {
-        item.id = index + 1;
-      });
-  }
-  },
-  async mounted(){
-    let user=localStorage.getItem('user-info')
-
-    // if there is no user they push to sign up page
-      if(!user){
-        this.$router.push({name:"Sign_Up"})
-       
-      }
-      else{
-    let res= await axios.get("http://localhost:3000/restaurant")
-     this.restaurant=res.data
+      if (result.status === 200) {
+        await this.load_data();
       }
     },
-   
-    
-}
+    async load_data() {
+      let user = localStorage.getItem('user-info');
 
+      if (!user) {
+        this.$router.push({ name: "Sign_Up" });
+      } else {
+        let res = await axios.get("http://localhost:3000/restaurant");
+        this.restaurant = res.data;
+
+        // Update the ids based on the order of items in the current data
+        this.restaurant.forEach((item, index) => {
+          item.id = index + 1;
+        });
+      }
+    }
+  },
+  async mounted() {
+    await this.load_data();
+  }
+};
 </script>
 
 <style>
