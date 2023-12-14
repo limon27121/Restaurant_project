@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import Header from "./Header.vue"
+import Header from "@/components/Header.vue"
 import axios  from "axios";
 
 
@@ -40,6 +40,12 @@ export default {
     return {
       restaurant: []
     };
+  },
+  components:{
+    Header
+  },
+  mounted:{
+     
   },
   methods: {
     async delete1(id) {

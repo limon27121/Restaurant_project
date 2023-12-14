@@ -161,6 +161,12 @@
       "email": "oishi@gmail.com",
       "password": "00000000",
       "id": 27
+    },
+    {
+      "name": "llllll",
+      "email": "limon@gmail1.com",
+      "password": "l11111111",
+      "id": 28
     }
   ],
   "restaurant": [
@@ -177,18 +183,6 @@
       "id": 5
     },
     {
-      "name": "Circuit Sense",
-      "address": "Kuril, Kuratoli",
-      "contact": "01980044357",
-      "id": 6
-    },
-    {
-      "name": "Circuit Sense",
-      "address": "Kuril, Kuratoli",
-      "contact": "01980044357",
-      "id": 7
-    },
-    {
       "name": "italia",
       "address": "sony square",
       "contact": "01552353448",
@@ -199,6 +193,12 @@
       "address": "sony square2",
       "contact": "0155235345",
       "id": 12
+    },
+    {
+      "name": "red dot",
+      "address": "134/14 block-kha uttor bisil mirpur1",
+      "contact": "01623692274",
+      "id": 13
     }
   ]
 }

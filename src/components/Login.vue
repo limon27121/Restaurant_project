@@ -52,11 +52,11 @@ methods:{
 mounted(){
   
   // if data is match with local storage item go to home page
-    let user=localStorage.getItem('user-info')
-      if(user){
-        this.$router.push({name:"home"})
+    // let user=localStorage.getItem('user-info')
+    //   if(user){
+    //     this.$router.push({name:"home"})
        
-      }
+    //   }
 
     }
 }

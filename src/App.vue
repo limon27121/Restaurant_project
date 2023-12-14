@@ -4,11 +4,13 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav> -->
+  <Header/>
   <router-view/>
-  <!-- <Sign_Up/> -->
+  <Sign_Up/>
 </template>
 <script>
-// import Sign_Up from'./components/Sign_Up.vue'
+import Header from'./components/Header.vue'
+import Sign_Up from'./components/Sign_Up.vue'
 export default {
   name: 'App',
   // components: {Sign_Up}

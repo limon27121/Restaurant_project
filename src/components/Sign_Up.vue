@@ -57,6 +57,17 @@ export default {
       
     // },
     async signup(){
+     
+      if (this.name===""|| !this.email==="" || !this.password==="") {
+   alert('Please fill in all fields');
+    return;
+  }
+
+  // Check if the password is at least 6 characters long
+  if (this.password.length < 6) {
+   alert('Password must be at least 6 characters long');
+    return;
+  }
      let result= await axios.post("http://localhost:3000/users",{
       name:this.name,
       email:this.email,
