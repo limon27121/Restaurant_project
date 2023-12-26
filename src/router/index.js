@@ -4,8 +4,10 @@ import Home from '../components/Home.vue'
 import Sign_Up from '../components/Sign_Up.vue'
 import Login from '../components/Login.vue'
 import Add from '../components/Add.vue'
+
 // import Update from '../components/Update.vue'
-import HomeView from '../views//Update/HomeView.vue'
+// import HomeView from '../views//Update/HomeView.vue'
+import HomeView from '@/views/Update/HomeView.vue'
 import Update1 from '../views//Update/Update1.vue'
 
 

@@ -16,9 +16,9 @@
     </div>
     <button class="b1" @click="signup">sign up</button><br>
 
-    <router-link :to="{ name: 'Login' }"> <br>
+  <router-link :to="{ name: 'Login' }"> <br>
   <button class="login-link">Login</button>
-</router-link>
+  </router-link>
 
 
   </form>
@@ -35,8 +35,7 @@ export default {
         name: '',
         email: '',
         password: '',
-        passwordError: null,
-        logged: false
+        
       }
     },
     name:'Sign_Up',
@@ -58,7 +57,7 @@ export default {
     // },
     async signup(){
      
-      if (this.name===""|| !this.email==="" || !this.password==="") {
+      if (this.name===""|| this.email==="" || this.password==="") {
    alert('Please fill in all fields');
     return;
   }

@@ -15,7 +15,7 @@
         
         <!-- <router-link :to="{ name: 'Update' }" @click="updateRestaurantList">Update Restaurant List</router-link> -->
 
-        <a @click="logout()" href="#">Logout</a>
+        <router-link to="" @click="logout">Logout</router-link>
     </div>
 </div>
 </div>

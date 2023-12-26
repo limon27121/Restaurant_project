@@ -167,15 +167,15 @@
       "email": "limon@gmail1.com",
       "password": "l11111111",
       "id": 28
+    },
+    {
+      "name": "asif",
+      "email": "limon@gmail.com",
+      "password": "limon1234",
+      "id": 29
     }
   ],
   "restaurant": [
-    {
-      "name": "pizza12345",
-      "address": "Dhaka Bangladesh1",
-      "contact": "99999",
-      "id": 1
-    },
     {
       "name": "pizza23",
       "address": "Dhaka1 Bangladesh",

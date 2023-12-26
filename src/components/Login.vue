@@ -35,16 +35,19 @@ data(){
 },
 methods:{
   async home(){
-    //  let user=await axios.get(`localhost:3000/users?email=${this.email}&password=${this.password}`)
+    //we check with email address and password of user
     let user = await axios.get(`http://localhost:3000/users?email=${this.email}&password=${this.password}`)
 
 
      if(user.status==200 && user.data.length>0){
       //convert data to json and strore it in local storage
-      localStorage.setItem("user-info",JSON.stringify(user.data[0]))
+      localStorage.setItem("user-info",JSON.stringify(user.data))
       this.$router.push({name:"home"})
       
    
+  }
+  else{
+    alert("invalid email or password")
   }
  
 }
